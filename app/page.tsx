@@ -3,12 +3,14 @@ import Link from "next/link";
 import { Component } from "./component";
 
 export default function Page() {
-  return (
+    const decodedKorean = decodeURIComponent('/한글');
+
+    return (
       <div>
           <form
               action={async () => {
                   "use server";
-                  redirect("/한글");
+                  redirect(decodedKorean);
               }}
           >
               <button>Server redirect</button>
