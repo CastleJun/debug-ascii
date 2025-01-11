@@ -13,7 +13,6 @@ export default function Page() {
           >
               <button>Server redirect</button>
           </form>
-          <Component/>
           <Link href="/한글">Link</Link>
 
 <div>---------------------</div>
@@ -25,7 +24,6 @@ export default function Page() {
           >
               <button>Server redirect</button>
           </form>
-          <Component/>
           <Link href="/test">Link</Link>
       </div>
   );
