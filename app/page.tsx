@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Component } from "./component";
 
 export default function Page() {
-    const decodedKorean = decodeURIComponent('/한글');
+    const decodedKorean = encodeURI('/한글');
 
     return (
       <div>
