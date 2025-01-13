@@ -2,11 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 
 export default async function middleware(request: NextRequest) {
-  // 요청 헤더 출력
-  console.log('Request Headers:');
-  request.headers.forEach((value, key) => {
-    console.log(`${key}: ${value}`);
-  });
+  // x-matched-path 헤더만 출력
+  const matchedPath = request.headers.get('x-matched-path');
+  console.log('x-matched-path:', matchedPath);
 
   return NextResponse.next();
 }
