@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 
 export default async function middleware(request: NextRequest) {
-  // x-matched-path 헤더만 출력
-  const matchedPath = request.headers.get('x-matched-path');
-  console.log('x-matched-path:', matchedPath);
+
+  const matchedPath = request.headers;
+  console.log(JSON.stringify(matchedPath))
 
   return NextResponse.next();
 }
